@@ -13,7 +13,6 @@ const Project = ({ item }) => {
 };
 
 const Projects = () => {
-  console.log(projects);
   return (
     <Fragment>
       <h2>Current</h2>
