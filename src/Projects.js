@@ -23,7 +23,7 @@ const Projects = () => {
       </div>
       <h2>Past</h2>
       <div className="row mr-3 ml-3">
-        {projects.current.map(item => (
+        {projects.past.map(item => (
           <Project item={item} key={item.name} />
         ))}
       </div>
