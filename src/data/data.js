@@ -6,31 +6,31 @@ export const projects = {
         "A tiny little squirrel is crossing the street, and there comes a car..."
     },
     {
-      name: "Lorem ipsum",
+      name: "Sunny",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "A short animation about an alarm clock owned by a college student."
     },
     {
-      name: "Lorem ipsum",
+      name: "Pro Bending VR",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "A Pro Bending game developed in VR."
     }
   ],
   past: [
     {
-      name: "Lorem ipsum",
+      name: "Curvature",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "A short animation about a triangle who finally finds his sense of belonging in a group of circles."
     },
     {
-      name: "Lorem ipsum",
+      name: "In Darkness",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "A game where you are put in darkness and learn your surroundings through walking around, knocking things over, and listening for noises."
     },
     {
-      name: "Lorem ipsum",
+      name: "Mesozoic Park",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "An interactive dinosaur park where players can explore an island populated by five kinds of dinosaurs and watch them eat, move, and roar."
     }
   ]
 };
