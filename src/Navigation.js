@@ -34,8 +34,12 @@ class Navigation extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <DefaultLayout exact path="/" component={App} size={this.state} />
-        <DefaultLayout path="/projects" component={Projects} />
-        <DefaultLayout path="/about" component={About} />
+        <DefaultLayout
+          path="/projects"
+          component={Projects}
+          size={this.state}
+        />
+        <DefaultLayout path="/about" component={About} size={this.state} />
         <DefaultLayout path="/gallery" component={Gallery} size={this.state} />
       </Router>
     );
