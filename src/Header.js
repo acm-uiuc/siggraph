@@ -5,7 +5,8 @@ import { Navbar, Nav } from "react-bootstrap";
 const Header = () => (
   <Navbar expand="md" variant="light" bg="light" sticky="top">
     <Navbar.Brand as={NavLink} exact to="/">
-      ACM Siggraph University of Illinois
+      <span className="full-brand">ACM SIGGRAPH University of Illinois</span>
+      <span className="abbrev-brand">SIGGRAPH UIUC</span>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbar-nav" />
     <Navbar.Collapse id="navbar-nav">
