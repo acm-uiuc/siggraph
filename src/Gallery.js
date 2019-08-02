@@ -112,7 +112,6 @@ class Gallery extends Component {
     let nextIndex =
       (this.state.slideIndex + num + models.length) % models.length;
 
-    console.log(nextIndex);
     this.setState({
       slideIndex: nextIndex
     });

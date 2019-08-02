@@ -5,7 +5,6 @@ import Background from "./Background";
 class App extends Component {
   render() {
     const { width, height } = this.props.size;
-    console.log(this.props);
     return (
       <div className="App">
         <Background width={width} height={height} />

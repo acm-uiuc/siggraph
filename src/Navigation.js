@@ -67,4 +67,6 @@ const DefaultLayout = ({ component: Component, size, ...rest }) => {
 
 const Construction = () => <h1>This page is under construction</h1>;
 
+const NotFound = () => <h1>The page you're looking for does not exist :(</h1>;
+
 export default Navigation;
