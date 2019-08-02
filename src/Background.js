@@ -1,61 +1,48 @@
 import React, { Component } from "react";
-const THREE = window.THREE;
+import * as THREE from "three";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 class Background extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: 0,
-      height: 0
-    };
-  }
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
+    const { width, height } = this.props;
+
     //ADD SCENE
     this.scene = new THREE.Scene();
     //ADD CAMERA
-    this.camera = new THREE.PerspectiveCamera(
-      75,
-      this.state.width / this.state.height,
-      0.1,
-      1000
-    );
-    this.camera.position.z = 4;
+    this.camera = new THREE.PerspectiveCamera(45, width / height, 1, 2000);
+    this.camera.position.z = 15;
     //ADD LIGHT
-    var light = new THREE.PointLight(0xff0000, 1, 100);
-    light.position.set(0, 0, 10);
-    this.scene.add(light);
+    var pointLight = new THREE.PointLight(0xff0000, 1, 100);
+    this.camera.add(pointLight);
+    // var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
+    // this.scene.add(ambientLight);
+    this.scene.add(this.camera);
     //Test Orbit controls
     // var controls = new THREE.OrbitControls(this.camera);
     //ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    this.renderer.setSize(this.state.width, this.state.height);
+    this.renderer.setPixelRatio(window.devicePixelRatio);
+    this.renderer.setSize(width, height);
     this.mount.appendChild(this.renderer.domElement);
-    //ADD CUBE
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshLambertMaterial({
-      color: Math.random() * 0xffffff
+    // ADD CUBE
+    let that = this;
+    const loader = new FBXLoader();
+    loader.load("models/index.fbx", function(object) {
+      object.traverse(function(child) {
+        if (child.isMesh) {
+          child.castShadow = true;
+          child.receiveShadow = true;
+        }
+      });
+      that.scene.add(object);
+      that.cube = object;
+      that.start();
     });
-    this.cube = new THREE.Mesh(geometry, material);
-    this.scene.add(this.cube);
-    this.start();
   }
   componentWillUnmount() {
     this.stop();
     this.mount.removeChild(this.renderer.domElement);
-
-    window.removeEventListener("resize", this.updateDimensions);
   }
-
-  updateDimensions = () => {
-    this.setState({
-      width: window.innerWidth,
-      height: window.innerHeight - 100
-    });
-  };
-  componentWillMount = () => {
-    this.updateDimensions();
-  };
   start = () => {
     if (!this.frameId) {
       this.frameId = requestAnimationFrame(this.animate);
@@ -74,10 +61,16 @@ class Background extends Component {
     this.renderer.render(this.scene, this.camera);
   };
   render() {
+    const { width, height } = this.props;
+    if (this.camera) {
+      this.camera.aspect = width / height;
+      this.camera.updateProjectionMatrix();
+      this.renderer.setSize(width, height);
+    }
     return (
       <div
-        id="background"
-        style={{ width: this.state.width, height: this.state.height }}
+        className="canvas"
+        style={{ width: width, height: height }}
         ref={mount => {
           this.mount = mount;
         }}

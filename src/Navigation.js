@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -7,32 +8,59 @@ import Footer from "./Footer";
 import App from "./App";
 import Projects from "./Projects";
 import About from "./About";
+import Gallery from "./Gallery";
 
-const Navigation = () => (
-  <Router basename={process.env.PUBLIC_URL}>
-    <div className="container">
-      <DefaultLayout exact path="/" component={App} />
-      <DefaultLayout path="/projects" component={Projects} />
-      <DefaultLayout path="/about" component={About} />
-    </div>
-  </Router>
-);
+class Navigation extends Component {
+  constructor() {
+    super();
+    this.state = {
+      width: 0,
+      height: 0
+    };
+  }
 
-const DefaultLayout = ({ component: Component, ...rest }) => {
+  updateDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  };
+  componentDidMount = () => {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  };
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", this.updateDimensions);
+  };
+
+  render() {
+    return (
+      <Router basename={process.env.PUBLIC_URL}>
+        <DefaultLayout exact path="/" component={App} size={this.state} />
+        <DefaultLayout path="/projects" component={Projects} />
+        <DefaultLayout path="/about" component={About} />
+        <DefaultLayout path="/gallery" component={Gallery} size={this.state} />
+      </Router>
+    );
+  }
+}
+
+const DefaultLayout = ({ component: Component, size, ...rest }) => {
   return (
     <Route
       {...rest}
       render={matchProps => (
-        <React.Fragment>
-          <Header />
-          <Component {...matchProps} />
-          <Footer />
-        </React.Fragment>
+        <>
+          <div className="main-container">
+            <Header />
+            <Container>
+              <Component {...matchProps} size={size} />
+            </Container>
+            <Footer />
+          </div>
+        </>
       )}
     />
   );
 };
 
-const Construction = ({ match }) => <h1>This page is under construction</h1>;
+const Construction = () => <h1>This page is under construction</h1>;
 
 export default Navigation;

@@ -1,39 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 
 const Header = () => (
-  <nav className="navbar navbar-expand-sm navbar-light">
-    <span className="navbar-brand mb-0 h1 text-dark">
+  <Navbar expand="md" variant="light" bg="light" sticky="top">
+    <Navbar.Brand as={NavLink} exact to="/">
       ACM Siggraph University of Illinois
-    </span>
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div
-      className="collapse navbar-collapse justify-content-end"
-      id="navbarNav"
-    >
-      <div className="navbar-nav">
-        <NavLink exact to="/" className="nav-item nav-link">
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="navbar-nav" />
+    <Navbar.Collapse id="navbar-nav">
+      <Nav className="ml-auto">
+        <Nav.Link as={NavLink} exact to="/">
           Home
-        </NavLink>
-        <NavLink to="/projects" className="nav-item nav-link">
+        </Nav.Link>
+        <Nav.Link as={NavLink} to="/projects">
           Projects
-        </NavLink>
-        <NavLink to="/about" className="nav-item nav-link">
+        </Nav.Link>
+        <Nav.Link as={NavLink} to="/gallery">
+          Gallery
+        </Nav.Link>
+        <Nav.Link as={NavLink} to="/about">
           About
-        </NavLink>
-      </div>
-    </div>
-  </nav>
+        </Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 export default Header;

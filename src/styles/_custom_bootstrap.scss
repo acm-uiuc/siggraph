@@ -1,5 +1,6 @@
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
-
 $link-color: #000;
+@import "~bootstrap/scss/bootstrap";
+
+.bg-light {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
