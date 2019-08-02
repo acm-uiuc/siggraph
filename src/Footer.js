@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Facebook, Slack } from "react-feather";
+import { Mail, Facebook, Slack, Instagram } from "react-feather";
 
 const links = [
   {
@@ -7,7 +7,11 @@ const links = [
     address: "mailto:siggraphuiuc@gmail.com"
   },
   { icon: <Facebook />, address: "https://www.facebook.com/uiucacmsiggraph/" },
-  { icon: <Slack />, address: "https://siggraphuiuc.slack.com" }
+  { icon: <Slack />, address: "https://siggraphuiuc.slack.com" },
+  {
+    icon: <Instagram />,
+    address: "https://www.instagram.com/siggraph.uiuc/"
+  }
 ];
 
 const Footer = () => (

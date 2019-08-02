@@ -10,7 +10,8 @@ const models = ["cookie", "gorillaobjrefined", "person2", "unicorn"];
 
 class Gallery extends Component {
   state = {
-    slideIndex: 0
+    slideIndex: 0,
+    loading: null
   };
 
   componentDidMount() {
@@ -99,7 +100,9 @@ class Gallery extends Component {
         that.start();
       },
       function(xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + "% Loaded");
+        that.setState({
+          loading: xhr.loaded !== xhr.total ? xhr.loaded / xhr.total : null
+        });
       },
       function(error) {
         console.log(error);
@@ -119,6 +122,7 @@ class Gallery extends Component {
   };
   render() {
     const { width, height } = this.props.size;
+    const { loading } = this.state;
     return (
       <>
         <div
@@ -128,6 +132,7 @@ class Gallery extends Component {
             this.mount = mount;
           }}
         />
+        {loading && <p>Loading {(loading * 100).toFixed(2)}%</p>}
         <div className="d-flex justify-content-between align-items-center slide-controls">
           <Button variant="outline-dark" onClick={() => this.nextSlide(-1)}>
             <ChevronLeft />

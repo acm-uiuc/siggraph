@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 import Header from "./Header";
@@ -33,14 +33,21 @@ class Navigation extends Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <DefaultLayout exact path="/" component={App} size={this.state} />
-        <DefaultLayout
-          path="/projects"
-          component={Projects}
-          size={this.state}
-        />
-        <DefaultLayout path="/about" component={About} size={this.state} />
-        <DefaultLayout path="/gallery" component={Gallery} size={this.state} />
+        <Switch>
+          <DefaultLayout exact path="/" component={App} size={this.state} />
+          <DefaultLayout
+            path="/projects"
+            component={Projects}
+            size={this.state}
+          />
+          <DefaultLayout path="/about" component={About} size={this.state} />
+          <DefaultLayout
+            path="/gallery"
+            component={Gallery}
+            size={this.state}
+          />
+          <DefaultLayout component={NotFound} />
+        </Switch>
       </Router>
     );
   }
@@ -67,6 +74,10 @@ const DefaultLayout = ({ component: Component, size, ...rest }) => {
 
 const Construction = () => <h1>This page is under construction</h1>;
 
-const NotFound = () => <h1>The page you're looking for does not exist :(</h1>;
+const NotFound = () => (
+  <h1 className="d-flex align-items-center justify-content-center">
+    The page you're looking for does not exist :(
+  </h1>
+);
 
 export default Navigation;
