@@ -26,7 +26,7 @@ const About = ({ size }) => {
     <>
       <h2>About Us</h2>
       {about.about}
-      <p className="h5 mt-3">Meet us on Mondays 7pm @ Siebel 3401!</p>
+      <p className="h5 mt-3">{about.meeting}</p>
       <h3 className="mt-1">Exec</h3>
       <StackGrid columnWidth={width <= 768 ? "100%" : "33.33%"}>
         {about.exec.map(item => (

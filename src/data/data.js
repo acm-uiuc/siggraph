@@ -3,7 +3,8 @@ export const projects = {
     {
       name: "Go Squirrel",
       description:
-        "A tiny little squirrel is crossing the street, and there comes a car..."
+        "A tiny little squirrel is crossing the street, and there comes a car...",
+      media: "https://youtu.be/FCCHRdrrfnw"
     },
     {
       name: "Sunny",
@@ -12,8 +13,13 @@ export const projects = {
     },
     {
       name: "Pro Bending VR",
+      description: "A Pro Bending game developed in VR."
+    },
+    {
+      name: "3D Museum",
       description:
-        "A Pro Bending game developed in VR."
+        "A collection of distinct model works over the past semester",
+      media: "https://youtu.be/MGKMD_lFVrM"
     }
   ],
   past: [
@@ -40,19 +46,27 @@ export const about = {
     "We are the student chapter of ACM SIGGRAPH at the University of Illinois at Urbana-Champaign. ACM SIGGRAPH is a nonprofit international membership organization made up of thousands of people who share a passion for computer graphics and interactive techniques. ACM SIGGRAPH members are involved in a wide variety of fields, including computer graphics research, software development, digital art, scientific visualization, interactive technology, game design, visual effects, computer science, education, engineering, graphic design, film and television production, scientific research and more.",
   exec: [
     {
-      name: "Samuel McFadden",
+      name: "Chen Qian",
       position: "Chair",
-      email: "samuelm2@illinois.edu"
-    },
-    {
-      name: "Jasmine Shih",
-      position: "Vice Chair",
-      email: "yshih8@illinois.edu"
+      email: "chenq2@illinois.edu"
     },
     {
       name: "Michelle Giang",
-      position: "Treasurer",
+      position: "Soical Lead",
       email: "giang2@illinois.edu"
+    },
+    {
+      name: "Samuel McFadden",
+      position: "Tech Lead",
+      email: "samuelm2@illinois.edu"
+    },
+
+    {
+      name: "Kevin Zhang",
+      position: "Project Lead",
+      email: ""
     }
-  ]
+  ],
+  meeting:
+    "The meeting time and location is still TBD. Join Slack and we'll keep you updated!"
 };
