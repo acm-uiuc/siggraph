@@ -48,23 +48,27 @@ export const about = {
     {
       name: "Chen Qian",
       position: "Chair",
-      email: "chenq2@illinois.edu"
+      email: "chenq2@illinois.edu",
+      media: "/assets/69644465_2583059828425174_7273571233680064512_n.jpg"
     },
     {
       name: "Michelle Giang",
       position: "Soical Lead",
-      email: "giang2@illinois.edu"
+      email: "giang2@illinois.edu",
+      media: "/assets/69670963_1519190078220579_5585171975615021056_n.jpg"
     },
     {
       name: "Samuel McFadden",
       position: "Tech Lead",
-      email: "samuelm2@illinois.edu"
+      email: "samuelm2@illinois.edu",
+      media: "/assets/69909412_663003744185662_388294541393788928_n.jpg"
     },
 
     {
       name: "Kevin Zhang",
       position: "Project Lead",
-      email: ""
+      email: "kevinyz2@illinois.edu",
+      media: "/assets/69737335_758924751191212_7001146307112861696_n.jpg"
     }
   ],
   meeting:

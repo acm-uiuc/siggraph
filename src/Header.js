@@ -2,15 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 
-import favicon from "./assets/favicon.png";
-import logo from "./assets/logo.png";
-
 const Header = () => (
   <Navbar expand="md" variant="light" bg="light" sticky="top">
     <Navbar.Brand as={NavLink} exact to="/">
       <span className="full-brand">
         <img
-          src={favicon}
+          src={process.env.PUBLIC_URL + "/assets/favicon.png"}
           width="30"
           height="30"
           className="d-inline-block align-top mr-1"
@@ -18,7 +15,12 @@ const Header = () => (
         />
         ACM SIGGRAPH University of Illinois
       </span>
-      <img className="abbrev-brand" height={50} src={logo}></img>
+      <img
+        className="abbrev-brand"
+        height={50}
+        src={process.env.PUBLIC_URL + "/assets/logo.png"}
+        alt="siggraph logo"
+      ></img>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbar-nav" />
     <Navbar.Collapse id="navbar-nav">

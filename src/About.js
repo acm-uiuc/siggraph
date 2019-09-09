@@ -1,23 +1,40 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 import StackGrid from "react-stack-grid";
 import { about } from "./data/data";
 
 const Officer = ({ item }) => {
   return (
-    <div className="card m-3">
-      <div className="card-body">
-        <h4 className="card-title">{item.name}</h4>
-        <h5 className="card-text">{item.position}</h5>
-        <a
-          href={"mailto:" + item.email}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {item.email}
-        </a>
-      </div>
-    </div>
+    <Card>
+      {item.media && (
+        <Card.Img variant="top" src={process.env.PUBLIC_URL + item.media} />
+      )}
+      <Card.Body>
+        <Card.Title>{item.name}</Card.Title>
+        <Card.Text>
+          {item.position}
+          <br />
+          <a
+            href={"mailto:" + item.email}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.email}
+          </a>
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
+};
+
+const getColumnWidth = width => {
+  if (width < 540) {
+    return "100%";
+  } else if (width < 960) {
+    return "50%";
+  } else {
+    return "25%";
+  }
 };
 
 const About = ({ size }) => {
@@ -28,7 +45,11 @@ const About = ({ size }) => {
       {about.about}
       <p className="h5 mt-3">{about.meeting}</p>
       <h3 className="mt-1">Exec</h3>
-      <StackGrid columnWidth={width <= 768 ? "100%" : "33.33%"}>
+      <StackGrid
+        columnWidth={getColumnWidth(width)}
+        monitorImagesLoaded
+        gutterWidth={10}
+      >
         {about.exec.map(item => (
           <Officer item={item} key={item.name} />
         ))}
