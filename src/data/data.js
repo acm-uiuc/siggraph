@@ -72,5 +72,5 @@ export const about = {
     }
   ],
   meeting:
-    "The meeting time and location is still TBD. Join Slack and we'll keep you updated!"
+      "Meet us on Monday 6pm in Siebel 3401!"
 };
