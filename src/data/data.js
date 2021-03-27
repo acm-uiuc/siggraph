@@ -72,5 +72,5 @@ export const about = {
     }
   ],
   meeting:
-      "Meet us on Monday 6pm in Siebel 3401!"
+      "Join us for meetings on discord Mondays 5-6PM CST!"
 };
