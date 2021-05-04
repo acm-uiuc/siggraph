@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "edfbb5b950987363d171fa6c8b6443f8",
+    "revision": "0fe9b5dd0a42e7f74e62d318ae54ec0c",
     "url": "/siggraph/index.html"
   },
   {
-    "revision": "028e873be76fa431aab0",
+    "revision": "0f4acd1e634fe5f6bbdc",
     "url": "/siggraph/static/css/main.f0b267f2.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/siggraph/static/js/2.3cac8fe3.chunk.js"
   },
   {
-    "revision": "028e873be76fa431aab0",
-    "url": "/siggraph/static/js/main.77e0ef8f.chunk.js"
+    "revision": "0f4acd1e634fe5f6bbdc",
+    "url": "/siggraph/static/js/main.7902763b.chunk.js"
   },
   {
     "revision": "9193345ded18d91551f0",
