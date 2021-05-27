@@ -22,3 +22,6 @@ yarn-error.log*
 
 # maya source files
 /public/models/source
+
+# Editor Files
+/.vs

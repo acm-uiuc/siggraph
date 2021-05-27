@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
 import Header from "./Header";
@@ -32,7 +32,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/"> {/* When using HashRouter, we don't need the public URL as a basename */}
         <Switch>
           <DefaultLayout exact path="/" component={App} size={this.state} />
           <DefaultLayout

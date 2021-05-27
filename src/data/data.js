@@ -46,31 +46,24 @@ export const about = {
     "We are the student chapter of ACM SIGGRAPH at the University of Illinois at Urbana-Champaign. ACM SIGGRAPH is a nonprofit international membership organization made up of thousands of people who share a passion for computer graphics and interactive techniques. ACM SIGGRAPH members are involved in a wide variety of fields, including computer graphics research, software development, digital art, scientific visualization, interactive technology, game design, visual effects, computer science, education, engineering, graphic design, film and television production, scientific research and more.",
   exec: [
     {
-      name: "Chen Qian",
-      position: "Chair",
-      email: "chenq2@illinois.edu",
-      media: "/assets/69644465_2583059828425174_7273571233680064512_n.jpg"
+      name: "Sahil Patel",
+      position: "Co-Chair",
+      email: "sahilsp2@illinois.edu",
+      media: "/assets/Sahil Patel.jpg"
     },
     {
-      name: "Michelle Giang",
-      position: "Soical Lead",
-      email: "giang2@illinois.edu",
-      media: "/assets/69670963_1519190078220579_5585171975615021056_n.jpg"
+      name: "Stacy Zheng",
+      position: "Co-Chair",
+      email: "stacymz2@illinois.edu",
+      media: "/assets/Stacy Zheng.jpg"
     },
     {
-      name: "Samuel McFadden",
-      position: "Tech Lead",
-      email: "samuelm2@illinois.edu",
-      media: "/assets/69909412_663003744185662_388294541393788928_n.jpg"
+      name: "Michael Korenchan",
+      position: "Co-Chair",
+      email: "mbk6@illinois.edu",
+      media: "/assets/Michael Korenchan.jpg"
     },
-
-    {
-      name: "Kevin Zhang",
-      position: "Project Lead",
-      email: "kevinyz2@illinois.edu",
-      media: "/assets/69737335_758924751191212_7001146307112861696_n.jpg"
-    }
   ],
   meeting:
-      "Join us for meetings on discord Mondays 5-6PM CST!"
+      "Join us for meetings on Discord Mondays 5-6PM CST!"
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import { Mail, Facebook, Slack, Instagram } from "react-feather";
+import { Mail } from "react-feather";
+import { Facebook, Slack, Instagram, Discord } from "@icons-pack/react-simple-icons";
 
 const links = [
   {
@@ -11,7 +12,11 @@ const links = [
   {
     icon: <Instagram />,
     address: "https://www.instagram.com/siggraph.uiuc/"
-  }
+  },
+  {
+    icon: <Discord />,
+    address: "https://discord.gg/tshGb99gF7"
+  },
 ];
 
 const Footer = () => (
