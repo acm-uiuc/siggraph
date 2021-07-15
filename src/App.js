@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     const { width, height } = this.props.size;
     return (
-      <div className="App">
+      <div className="App" style="background-image: url('high_Tea.png');">
         <Background width={width} height={height} />
         <h1 className="center w-100">SIGGRAPH @ UIUC</h1>
       </div>
