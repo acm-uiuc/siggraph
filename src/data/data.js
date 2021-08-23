@@ -65,5 +65,5 @@ export const about = {
     },
   ],
   meeting:
-      "Join us for meetings on Discord Mondays 5-6PM CST!"
+      "Join us for meetings Monday in Siebel CS Center Rm 1103 4pm - 5pm CST!"
 };
