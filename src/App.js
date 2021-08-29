@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 
-import Background from "./Background";
-
 class App extends Component {
   render() {
-    const { width, height } = this.props.size;
     return (
-      <div className="App">
-        <Background width={width} height={height} />
-        <h1 className="center w-100">SIGGRAPH @ UIUC</h1>
-      </div>
+        <img className="poster" style ={{width: '100%'}} src={process.env.PUBLIC_URL + '/assets/hi_tea.png'} alt="hi tea poster" />
     );
   }
 }
