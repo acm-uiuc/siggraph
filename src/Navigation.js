@@ -34,7 +34,12 @@ class Navigation extends Component {
     return (
       <Router basename="/"> {/* When using HashRouter, we don't need the public URL as a basename */}
         <Switch>
-          <DefaultLayout exact path="/" component={App} size={this.state} />
+          {/* 
+              PosterLayout is like DefaultLayout but without a Container component. This allows the poster to stretch
+              the full length of the screen. When the front page has a poster, use PosterLayout for App. Otherwise
+              use DefaultLayout.
+          */}
+          <PosterLayout exact path="/" component={App} size={this.state} />
           <DefaultLayout
             path="/projects"
             component={Projects}
@@ -64,6 +69,23 @@ const DefaultLayout = ({ component: Component, size, ...rest }) => {
             <Container>
               <Component {...matchProps} size={size} />
             </Container>
+            <Footer />
+          </div>
+        </>
+      )}
+    />
+  );
+};
+
+const PosterLayout = ({ component: Component, size, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={matchProps => (
+        <>
+          <div className="main-container">
+            <Header />
+              <Component {...matchProps} size={size} />
             <Footer />
           </div>
         </>
