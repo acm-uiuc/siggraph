@@ -1,28 +1,40 @@
 export const projects = {
   current: [
     {
+      name: "Island Survival",
+      description: "An island-survival game built in Unity with pre-rendered cut-scenes"
+    },
+    {
+      name: "Rendering Engine",
+      description: "A rendering engine built to work with Vulkan and OpenGL"
+    },
+    {
+      name: "Audio Visualizer",
+      description: "Creates interesting visuals based on the current song"
+    },
+    {
+      name: "Clouds",
+      description: "A physically-based rendering project exploring how light interacts with clouds"
+    }
+  ],
+  past: [
+    {
       name: "Go Squirrel",
       description:
         "A tiny little squirrel is crossing the street, and there comes a car...",
       media: "https://youtu.be/FCCHRdrrfnw"
     },
     {
-      name: "Sunny",
-      description:
-        "A short animation about an alarm clock owned by a college student."
-    },
-    {
-      name: "Pro Bending VR",
-      description: "A Pro Bending game developed in VR."
-    },
-    {
       name: "3D Museum",
       description:
         "A collection of distinct model works over the past semester",
       media: "https://youtu.be/MGKMD_lFVrM"
-    }
-  ],
-  past: [
+    },
+    {
+      name: "Sunny",
+      description:
+        "A short animation about an alarm clock owned by a college student."
+    },
     {
       name: "Curvature",
       description:
@@ -37,7 +49,7 @@ export const projects = {
       name: "Mesozoic Park",
       description:
         "An interactive dinosaur park where players can explore an island populated by five kinds of dinosaurs and watch them eat, move, and roar."
-    }
+    },
   ]
 };
 
@@ -65,5 +77,5 @@ export const about = {
     },
   ],
   meeting:
-      "Join us for meetings Monday in Siebel CS Center Rm 1103 4pm - 5pm CST!"
+      "Join us for meetings Monday in Siebel CS Center room 1111 4pm - 5pm CST. Join our Discord (link in footer) for more information!"
 };
