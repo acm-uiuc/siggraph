@@ -15,7 +15,7 @@ const links = [
   },
   {
     icon: <Discord />,
-    address: "https://discord.gg/tshGb99gF7"
+    address: "https://discord.gg/QtKSUBgJe3"
   },
 ];
 

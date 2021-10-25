@@ -27,8 +27,7 @@ class Background extends Component {
     // ADD CUBE
     let that = this;
     const loader = new FBXLoader();
-    //switched to teapot for now
-    loader.load("models/teapot.fbx", function(object) {
+    loader.load("models/index.fbx", function(object) {
       object.traverse(function(child) {
         if (child.isMesh) {
           child.castShadow = true;

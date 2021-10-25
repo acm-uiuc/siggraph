@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import App from "./App";
+import Poster from "./Poster";
 import Projects from "./Projects";
 import About from "./About";
 import Gallery from "./Gallery";
@@ -34,23 +35,23 @@ class Navigation extends Component {
     return (
       <Router basename="/"> {/* When using HashRouter, we don't need the public URL as a basename */}
         <Switch>
-          {/* 
-              PosterLayout is like DefaultLayout but without a Container component. This allows the poster to stretch
-              the full length of the screen. When the front page has a poster, use PosterLayout for App. Otherwise
-              use DefaultLayout.
-          */}
-          <PosterLayout exact path="/" component={App} size={this.state} />
+          {/* <PosterLayout exact path="/" component={Poster} src="/assets/hi_tea.png" alt="hi tea poster" /> */}
+          <DefaultLayout exact path="/" component={App} size={this.state} />
+
           <DefaultLayout
             path="/projects"
             component={Projects}
             size={this.state}
           />
+
           <DefaultLayout path="/about" component={About} size={this.state} />
+
           <DefaultLayout
             path="/gallery"
             component={Gallery}
             size={this.state}
           />
+          
           <DefaultLayout component={NotFound} />
         </Switch>
       </Router>
@@ -77,7 +78,7 @@ const DefaultLayout = ({ component: Component, size, ...rest }) => {
   );
 };
 
-const PosterLayout = ({ component: Component, size, ...rest }) => {
+const PosterLayout = ({ component: Component, size, src, alt, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -85,7 +86,7 @@ const PosterLayout = ({ component: Component, size, ...rest }) => {
         <>
           <div className="main-container">
             <Header />
-              <Component {...matchProps} size={size} />
+              <Component {...matchProps} size={size} src={src} alt={alt} />
             <Footer />
           </div>
         </>
