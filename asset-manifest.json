@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/siggraph/static/css/main.f0b267f2.chunk.css",
-    "main.js": "/siggraph/static/js/main.80d78bb4.chunk.js",
-    "main.js.map": "/siggraph/static/js/main.80d78bb4.chunk.js.map",
-    "runtime~main.js": "/siggraph/static/js/runtime~main.8562dd1d.js",
-    "runtime~main.js.map": "/siggraph/static/js/runtime~main.8562dd1d.js.map",
-    "static/js/2.0b93cae6.chunk.js": "/siggraph/static/js/2.0b93cae6.chunk.js",
-    "static/js/2.0b93cae6.chunk.js.map": "/siggraph/static/js/2.0b93cae6.chunk.js.map",
-    "index.html": "/siggraph/index.html",
-    "precache-manifest.c3d2d4c5ca2f6bd0b82bf0dc2a3c4472.js": "/siggraph/precache-manifest.c3d2d4c5ca2f6bd0b82bf0dc2a3c4472.js",
-    "service-worker.js": "/siggraph/service-worker.js",
-    "static/css/main.f0b267f2.chunk.css.map": "/siggraph/static/css/main.f0b267f2.chunk.css.map"
-  }
+    "main.css": "/static/css/main.9c0665c8.chunk.css",
+    "main.js": "/static/js/main.01f972ad.chunk.js",
+    "main.js.map": "/static/js/main.01f972ad.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.98a3dcce.js",
+    "runtime-main.js.map": "/static/js/runtime-main.98a3dcce.js.map",
+    "static/js/2.40e3e0f6.chunk.js": "/static/js/2.40e3e0f6.chunk.js",
+    "static/js/2.40e3e0f6.chunk.js.map": "/static/js/2.40e3e0f6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9c0665c8.chunk.css.map": "/static/css/main.9c0665c8.chunk.css.map",
+    "static/js/2.40e3e0f6.chunk.js.LICENSE.txt": "/static/js/2.40e3e0f6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98a3dcce.js",
+    "static/js/2.40e3e0f6.chunk.js",
+    "static/css/main.9c0665c8.chunk.css",
+    "static/js/main.01f972ad.chunk.js"
+  ]
 }
