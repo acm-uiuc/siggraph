@@ -1,4 +1,4 @@
-# [siggraph website](https://acm-uiuc.github.io/siggraph/)
+# [siggraph website](https://siggraph.acm.illinois.edu)
 The ACM-UIUC SIGGraph Website
 
 (Create-react-app + Bootstrap v4)
@@ -14,5 +14,5 @@ To contribute to the site, you must be a part of SIGGraph UIUC:
     $ git pull
     $ yarn run deploy
     ```
-    They should then check that the deployment at https://siggraph-uiuc.github.io/siggraph looks correct.
+    They should then check that the deployment at https://siggraph.acm.illinois.edu looks correct.
 5. Finally, you can make a PR from the fork to the original repository
