@@ -7,6 +7,12 @@ export const projects = {
   ],
   past: [
     {
+      name: "Fluid Simulation",
+      description:
+        "A 2D fluid simulation demo.",
+      media: "https://sahilshahpatel.com/fluid-sim/"
+    },
+    {
       name: "Go Squirrel",
       description:
         "A tiny little squirrel is crossing the street, and there comes a car...",
@@ -15,7 +21,7 @@ export const projects = {
     {
       name: "3D Museum",
       description:
-        "A collection of distinct model works over the past semester",
+        "A collection of distinct model works over the past semester.",
       media: "https://youtu.be/MGKMD_lFVrM"
     },
     {
