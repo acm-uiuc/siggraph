@@ -8,7 +8,6 @@ const links = [
     address: "mailto:siggraphuiuc@gmail.com"
   },
   { icon: <Facebook />, address: "https://www.facebook.com/uiucacmsiggraph/" },
-  { icon: <Slack />, address: "https://siggraphuiuc.slack.com" },
   {
     icon: <Instagram />,
     address: "https://www.instagram.com/siggraph.uiuc/"
