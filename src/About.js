@@ -44,13 +44,23 @@ const About = ({ size }) => {
       <h2>About Us</h2>
       {about.about}
       <p className="h5 mt-3">{about.meeting}</p>
-      <h3 className="mt-1">Exec</h3>
+      <h3 className="mt-1">Current Exec</h3>
       <StackGrid
         columnWidth={getColumnWidth(width)}
         monitorImagesLoaded
         gutterWidth={10}
       >
-        {about.exec.map(item => (
+        {about.curr_exec.map(item => (
+          <Officer item={item} key={item.name} />
+        ))}
+      </StackGrid>
+      <h3 className="mt-1">Former Exec (2021-2022)</h3>
+      <StackGrid
+        columnWidth={getColumnWidth(width)}
+        monitorImagesLoaded
+        gutterWidth={10}
+      >
+        {about.past_exec.map(item => (
           <Officer item={item} key={item.name} />
         ))}
       </StackGrid>

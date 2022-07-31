@@ -2,7 +2,7 @@
   "name": "siggraph-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://acm-uiuc.github.io/siggraph",
+  "homepage": "https://siggraph.acm.illinois.edu",
   "dependencies": {
     "@icons-pack/react-simple-icons": "^4.2.0",
     "bootstrap": "^4.3.1",
@@ -36,6 +36,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.9.3"
+    "sass": "^4.9.3"
   }
 }
